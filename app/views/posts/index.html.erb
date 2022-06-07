@@ -1,0 +1,16 @@
+<div class="container bg-light text-dark">
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<div id="posts" >
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post, class: "btn btn-primary mt-1 mb-3" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Write New post", new_post_path, class: "btn btn-success mt-1 mb-3" %>
+</div>
